@@ -2,9 +2,12 @@ name: slack-approval
 description: Custom action to send approval request to Slack from GitHub Actions
 author: varu3
 runs:
-  using: "node20"
-  pre: "npm ci"
-  main: "dist/index.js"
+  using: "composite"
+  steps:
+    - run: npm ci
+      shell: bash
+    - run: node dist/index.js
+      shell: node
 branding:
   icon: plus
   color: green
