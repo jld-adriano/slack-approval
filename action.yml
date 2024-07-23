@@ -3,8 +3,8 @@ description: Custom action to send approval request to Slack from GitHub Actions
 author: varu3
 runs:
   using: "node20"
+  pre: "npm ci"
   main: "dist/index.js"
 branding:
   icon: plus
   color: green
-
