@@ -4,7 +4,7 @@ author: varu3
 runs:
   using: "composite"
   steps:
-    - run: npm ci
+    - run: npm install
       shell: bash
     - run: node dist/index.js
       shell: node
